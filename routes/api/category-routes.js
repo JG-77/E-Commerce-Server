@@ -5,7 +5,8 @@ const { Category, Product } = require('../../models');
 
 router.get('/', (req, res) => {
   // find all categories
-  Category.findAll({
+  try {
+    const data = Category.findAll({
     include: [{
       model: Product,
       attributes: [
@@ -14,13 +15,17 @@ router.get('/', (req, res) => {
         "price",
         "stock"
       ]
-    }    
-    ]
-  })
-  .then(data => res.json(data))
-  .catch(err => {console.log(err);
-  res.status(500).json(err)})
-  }); 
+    }]
+    });
+    if (!data) {
+      res.status(404).json({ message: 'No user with this id!' });
+      return;
+    }
+    res.status(200).json(data);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+}); 
   // be sure to include its associated Products
 
 
