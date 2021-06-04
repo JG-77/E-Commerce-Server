@@ -17,26 +17,20 @@ ProductTag.init(
       type: DataTypes.INTEGER,
       references: {
      // reference to Product model
-     model: Product,
+     model: 'product',
 
      // column name of the referenced model
      key: 'id',
-
-     // This declares when to check the foreign key constraint. PostgreSQL only.
-     //deferrable: Sequelize.Deferrable.INITIALLY_IMMEDIATE
       }
     },
     tag_id: {
       type: DataTypes.INTEGER,
        references: {
-     // reference to Tag model
-     model: Tag,
+      // reference to Tag model
+      model: 'tag',
 
-     // column name of the referenced model
-     key: 'id',
-
-     // This declares when to check the foreign key constraint. PostgreSQL only.
-     //deferrable: Sequelize.Deferrable.INITIALLY_IMMEDIATE
+      // column name of the referenced model
+      key: 'id',
       }
     }
   },

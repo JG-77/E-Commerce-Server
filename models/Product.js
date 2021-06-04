@@ -39,13 +39,10 @@ Product.init(
       type: DataTypes.INTEGER,
       references: {
      // reference to Category model
-     model: Category,
+     model: 'category',
 
      // column name of the referenced model
      key: 'id',
-
-     // This declares when to check the foreign key constraint. PostgreSQL only.
-     //deferrable: Sequelize.Deferrable.INITIALLY_IMMEDIATE
       }
     }
   },
