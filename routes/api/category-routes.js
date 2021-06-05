@@ -7,15 +7,7 @@ const { Category, Product } = require('../../models');
 router.get('/', async (req, res) => {
   try {
     const data = await Category.findAll({
-    include: [{
-      model: Product,
-      attributes: [
-        "id",
-        "product_name",
-        "price",
-        "stock"
-      ]
-    }]
+    include: [{ model: Product }],
     });
     if (!data) {
       res.status(404).json({ message: 'ERROR 404' });
@@ -33,15 +25,7 @@ router.get('/', async (req, res) => {
 router.get('/:id', async (req, res) => { 
   try {
     const data = await Category.findByPk(req.params.id, { 
-    include: [{
-      model: Product,
-      attributes: [
-        "id",
-        "product_name",
-        "price",
-        "stock"
-      ]
-    }]
+    include: [{ model: Product }],
     });
     if (!data) {
       res.status(404).json({ message: 'No category with this id' });
@@ -51,12 +35,11 @@ router.get('/:id', async (req, res) => {
   } catch (err) {
     res.status(500).json(err);
   }
-
-
 });
 
 router.post('/', (req, res) => {
   // create a new category
+
 });
 
 router.put('/:id', (req, res) => {
