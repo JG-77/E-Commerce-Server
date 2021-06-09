@@ -19,10 +19,13 @@
 ## Application Screenshots
 
 ---
+![E-commerce app Insomnia GET Route](https://user-images.githubusercontent.com/76461629/121286034-210ac100-c894-11eb-875a-e9569797c57b.png)
 
-![E-commerce app screenshot 1]()
+![E-commerce app Insomnia GET by id Route](https://user-images.githubusercontent.com/76461629/121286042-2405b180-c894-11eb-8884-0fd4a3940313.png)
 
-![E-commerce app screenshot 2]()
+![E-commerce app Insomnia PUT Tag Route](https://user-images.githubusercontent.com/76461629/121286048-26680b80-c894-11eb-962f-74f225d35aca.png)
+
+![E-commerce code and terminal](https://user-images.githubusercontent.com/76461629/121286057-2962fc00-c894-11eb-888a-0de3a764ba6f.png)
 
 ## Description
 
